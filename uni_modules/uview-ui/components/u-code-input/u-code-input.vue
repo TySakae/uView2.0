@@ -142,7 +142,7 @@
 		methods: {
 			// 监听输入框的值发生变化
 			inputHandler(e) {
-				const value = e.detail.value
+				const value = e.detail.value.replace(/\./g,'')
 				this.inputValue = value
 				// 未达到maxlength之前，发送change事件，达到后发送finish事件
 				this.$emit('change', value)
